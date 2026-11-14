@@ -463,6 +463,40 @@ html[lang=fr] body,html[lang=en] body{font-family:'Readex Pro',var(--body)}
 @media(max-width:360px){.logo b{display:none}}
 .pb .row.total:first-child{border-top:0;margin-top:0;padding-top:4px}
 
+/* ===== شاشات الكمبيوتر: واجهة أوسع، كرة أكبر بلا إطار، سماء تمتد على عرض الشاشة ===== */
+@media(min-width:1200px){
+ .wrap{max-width:1320px;padding:0 32px}
+ .hero{position:relative;grid-template-columns:minmax(0,1fr) minmax(0,1.08fr);gap:48px;padding-top:12px;min-height:min(calc(100vh - 150px),720px)}
+ .hero::before{content:'';position:absolute;z-index:-1;top:-12px;bottom:-90px;left:50%;width:100vw;transform:translateX(-50%);
+  background:radial-gradient(60% 75% at 28% 48%,#D6E8FD 0%,rgba(214,232,253,.55) 45%,rgba(255,255,255,0) 75%),linear-gradient(180deg,#F4F9FF 0%,#FFFFFF 100%)}
+ [dir=ltr] .hero::before{background:radial-gradient(60% 75% at 72% 48%,#D6E8FD 0%,rgba(214,232,253,.55) 45%,rgba(255,255,255,0) 75%),linear-gradient(180deg,#F4F9FF 0%,#FFFFFF 100%)}
+ .hero h1{font-size:clamp(50px,4.1vw,62px);line-height:1.14;margin-top:16px}
+ .hero h1 em{white-space:nowrap}
+ .hero p.lead{font-size:18px;max-width:50ch;margin-top:18px}
+ .stats{gap:0;margin-top:30px}
+ .stat{padding-inline-end:28px;margin-inline-end:28px;border-inline-end:1px solid var(--line)}
+ .stat:last-child{border:0;margin:0;padding:0}
+ .stat b{font-size:42px}
+ .stat span{font-size:14px}
+ .hacts{margin-top:30px}
+ .hacts .btn{min-height:54px;padding:0 26px;font-size:16.5px}
+ .earth{aspect-ratio:auto;height:min(calc(100vh - 150px),700px);min-height:560px;max-height:none;background:transparent;box-shadow:none;border-radius:0;overflow:visible}
+ .eo.top{top:10px;right:0;left:0;justify-content:center;align-items:center;gap:14px}
+ .eo .clock{flex-direction:row;align-items:baseline;gap:8px}
+ .eo.bot{bottom:8px;right:0;left:0;justify-content:center;gap:28px}
+ .eo .phase{box-shadow:0 0 0 1px var(--line),0 2px 8px rgba(20,33,61,.06)}
+ .journey{position:relative;margin-top:18px;padding:22px 26px 16px}
+ .grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+ .block{padding-top:72px}
+ .nextc{padding:22px 26px}
+}
+@media(min-width:1600px){
+ .wrap{max-width:1400px}
+ .grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+
+html{overflow-x:clip}
+
 </style>
 </head>
 <body>
