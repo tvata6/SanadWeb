@@ -11,7 +11,9 @@
 <meta property="og:site_name" content="سند كارز">
 <meta property="og:title" content="سند كارز · سيارات حقيقية في مكانها الحقيقي">
 <meta property="og:description" content="شاهد كل سيارة على الباخرة الآن، ومتى تصل إلى ميناء الجزائر.">
-<!-- og:url و og:image تُضاف عند معرفة رابط الموقع -->
+<meta property="og:url" content="https://tvata6.github.io/SanadWeb/">
+<meta property="og:image" content="https://tvata6.github.io/SanadWeb/og-image.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:locale" content="ar_DZ"><meta property="og:locale:alternate" content="fr_FR"><meta property="og:locale:alternate" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="referrer" content="no-referrer">
@@ -797,7 +799,7 @@ var COLORS=[
 (function(){
 'use strict';
 var CFG=window.SANAD||{};
-var API=String(CFG.API||'').trim(), DEMO=!API;
+var API=String(CFG.API||'').trim(), DEMO=!API||/[?&]demo\b/.test(location.search);
 var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 /* ---------- اللغة ---------- */
